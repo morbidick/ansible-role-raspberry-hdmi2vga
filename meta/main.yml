@@ -1,0 +1,6 @@
+---
+galaxy_info:
+  author: Lukas Mohrbacher
+  description: manage VGA output over HDMI on a Raspberry Pi
+  license: MIT
+  dependencies: []
