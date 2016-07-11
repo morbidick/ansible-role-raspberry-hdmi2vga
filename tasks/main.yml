@@ -48,3 +48,11 @@
     line: "hdmi_drive={{ raspi_hdmi_drive }}"
     backrefs: yes
     state: present
+
+- name: Set overscan
+  lineinfile:
+    dest: "{{ raspi_boot_config }}"
+    regexp: "disable_overscan"
+    line: "disable_overscan={% if raspi_disable_overscan %}1{% else %}0{% endif %}"
+    backrefs: yes
+    state: present

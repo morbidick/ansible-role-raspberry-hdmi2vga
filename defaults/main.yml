@@ -7,3 +7,4 @@ raspi_hdmi_mode: 4
 raspi_display_rotate: 0
 raspi_audio_over_hdmi: no
 raspi_hdmi_drive: "{% if raspi_audio_over_hdmi %}2{% else %}1{% endif %}"
+raspi_disable_overscan: yes

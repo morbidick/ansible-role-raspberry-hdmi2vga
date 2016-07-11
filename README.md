@@ -28,6 +28,8 @@ raspi_display_rotate: 0
 # 0x20000  vertical flip
 
 raspi_audio_over_hdmi: no
+
+raspi_disable_overscan: yes
 ````
 
 For detailed options see [the official documentation](https://www.raspberrypi.org/documentation/configuration/config-txt.md).
