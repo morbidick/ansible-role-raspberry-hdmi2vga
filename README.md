@@ -1,5 +1,7 @@
 # Raspberry Pi - VGA over HDMI output
 
+[![Build Status](https://travis-ci.org/morbidick/ansible-role-raspberry-hdmi2vga.svg?branch=master)](https://travis-ci.org/morbidick/ansible-role-raspberry-hdmi2vga)
+
 A simpe Ansible role to manage VGA output over HDMI on a Raspberry Pi. Tested with the jessie lite raspbian image and a common HDMI to VGA adapter.
 
 After successful provisioning you need to reboot for the changes to take effect

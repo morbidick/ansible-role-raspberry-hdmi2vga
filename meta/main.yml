@@ -4,3 +4,8 @@ galaxy_info:
   description: manage VGA output over HDMI on a Raspberry Pi
   license: MIT
   dependencies: []
+  min_ansible_version: 2.0.0
+  platforms:
+  - name: Debian
+    versions:
+    - all
