@@ -1,5 +1,15 @@
 ---
 - hosts: all
 
+  vars:
+    raspi_boot_config: "~/test.txt"
+
+  pre_tasks:
+    - name: ensure raspi_boot_config file exists
+      file:
+        path: "{{ raspi_boot_config }}"
+        state: touch
+      changed_when: false
+
   roles:
     - role_under_test

@@ -4,7 +4,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "hdmi_safe"
     line: "hdmi_safe=1"
-    backrefs: yes
     state: present
   when: raspi_force_hdmi
 
@@ -13,7 +12,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "hdmi_force_hotplug"
     line: "hdmi_force_hotplug=1"
-    backrefs: yes
     state: present
   when: raspi_force_hdmi_hotplug
 
@@ -22,7 +20,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "hdmi_group"
     line: "hdmi_group={{ raspi_hdmi_group }}"
-    backrefs: yes
     state: present
 
 - name: Set HDMI mode
@@ -30,7 +27,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "hdmi_mode"
     line: "hdmi_mode={{ raspi_hdmi_mode }}"
-    backrefs: yes
     state: present
 
 - name: Set output rotation
@@ -38,7 +34,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "display_rotate"
     line: "display_rotate={{ raspi_display_rotate }}"
-    insertafter: EOF
     state: present
 
 - name: Set audio output
@@ -46,7 +41,6 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "hdmi_drive"
     line: "hdmi_drive={{ raspi_hdmi_drive }}"
-    backrefs: yes
     state: present
 
 - name: Set overscan
@@ -54,5 +48,4 @@
     dest: "{{ raspi_boot_config }}"
     regexp: "disable_overscan"
     line: "disable_overscan={% if raspi_disable_overscan %}1{% else %}0{% endif %}"
-    backrefs: yes
     state: present
